@@ -3,6 +3,7 @@ from graphene_django import DjangoObjectType
 from .models import *
 from graphene_django.filter import  DjangoFilterConnectionField
 
+'''A Node is an Interface provided by graphene.relay that contains a single field id (which is a ID!). Any object that inherits from it has to implement a get_node method for retrieving a Node by an id.'''A
 class CityNode(DjangoObjectType):
     class Meta:
         model = City 
