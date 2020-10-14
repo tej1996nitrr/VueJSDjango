@@ -8,4 +8,11 @@ class CityNode(DjangoObjectType):
         model = City 
         filter_fields = [‘city_name’]
         interfaces = (graphene.relay.Node,)
-        
+
+
+class TitleNode(DjangoObjectType):
+    class Meta:
+        model = Title
+        filter_fields = ['title_name']
+        interfaces = (graphene.relay.Node,)
+
