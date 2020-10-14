@@ -26,3 +26,10 @@ class EmployeeNode(DjangoObjectType):
                ]
         interfaces = (graphene.relay.Node,
 
+class Query(object):
+    city = graphene.relay.Node.Field(CityNode)
+    all_cities = DjangoFilterConnectionField(CityNode)    
+    title = graphene.relay.Node.Field(TitleNode)
+    all_titles = DjangoFilterConnectionField(TitleNode)    
+    employee = graphene.relay.Node.Field(EmployeeNode)
+    all_employees = DjangoFilterConnectionField(EmployeeNode)
