@@ -29,7 +29,6 @@ class EmployeeNode(DjangoObjectType):
                ]
         interfaces = (graphene.relay.Node,
 
-
 class Query(object):
     city = graphene.relay.Node.Field(CityNode)
     all_cities = DjangoFilterConnectionField(CityNode)    
