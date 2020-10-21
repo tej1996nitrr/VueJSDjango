@@ -8,7 +8,7 @@ from graphene_django.filter import  DjangoFilterConnectionField
 class CityNode(DjangoObjectType):
     class Meta:
         model = City 
-        filter_fields = [‘city_name’]
+        filter_fields = ['city_name']
         interfaces = (graphene.relay.Node,)
 
 
@@ -27,7 +27,7 @@ class EmployeeNode(DjangoObjectType):
               'employee_city__city_name',
               'employee_title__title_name'
                ]
-        interfaces = (graphene.relay.Node,
+        interfaces = (graphene.relay.Node,)
 
 class Query(object):
     city = graphene.relay.Node.Field(CityNode)
